@@ -1,0 +1,100 @@
+/* 기본 스타일링 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    /* position: fixed; */
+    width: 100%;
+    bottom: 0;
+}
+
+.tab-btn {
+    background-color: #777;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.tab-btn:focus {
+    outline: none;
+}
+
+.tab-btn.active {
+    background-color: #333;
+}
+
+/* 개인 프로필 스타일링 */
+.profile {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 20px;
+}
+
+.profile-item {
+    width: calc(33.33% - 10px);
+    margin-bottom: 20px;
+}
+
+.profile-item p {
+    margin-bottom: 10px;
+}
+
+/* 모바일에서 개인 프로필 아이템을 세로로 정렬 */
+@media screen and (max-width: 600px) {
+    .profile-item {
+        width: 100%;
+    }
+}
+
+/* 프로젝트 박스 스타일링 */
+.project-group {
+    margin-bottom: 20px;
+}
+.project-box {
+    border: 1px solid #ddd;
+    margin: 0 10px 10px 0;
+    padding: 10px 10px;
+    display: inline-block;
+    width: calc(22.5% - 10px); /* 4개씩 가로로 정렬, 마진 조정 */
+    vertical-align: top;
+}
+.project-info {
+    line-height: 1.5;
+}
+.project-info strong {
+    font-weight: bold;
+}
+/* 모바일에서는 1개씩 노출 */
+@media screen and (max-width: 600px) {
+    .project-box {
+        width: 100%; /* 1개씩 세로로 정렬 */
+    }
+}
